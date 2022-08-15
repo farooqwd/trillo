@@ -1,5 +1,6 @@
 .container {
-    max-width: 72rem;
+    //max-width: 72rem;
+    max-width: 80%;
     min-height: 40rem;
 
     margin:10rem auto;
@@ -16,7 +17,7 @@
     font-size: 1.2rem;
      height: 7rem;
      background-color: #fff;
-     border-bottom: var(--color-Grey-light-2);
+     border-bottom: 3px solid var(--color-Grey-light-2);
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -26,9 +27,13 @@
 .sidebar {
     background-color: var(--color-Grey-dark-1);
     flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view {
     background-color: #fff;
+    height: 40rem;
     flex: 1;
 }
