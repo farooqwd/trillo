@@ -10,7 +10,9 @@
   --color-Grey-dark-1: #333;
   --color-Grey-dark-2: #777;
   --color-Grey-dark-3: #999;
-  --shadow-dark:0 2rem 6rem rgba(0,0,0, .4); }
+  --shadow-dark:0 2rem 6rem rgba(0,0,0, .4);
+  --shadow-light:0 2rem 5rem rgba(0,0,0, .1);
+  --line: 1px solid var(--color-Grey-light-2); }
 
 * {
   margin: 0;
@@ -50,7 +52,7 @@ body {
   font-size: 1.2rem;
   height: 7rem;
   background-color: #fff;
-  border-bottom: 3px solid var(--color-Grey-light-2);
+  border-bottom: var(--line);
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -64,7 +66,24 @@ body {
 
 .hotel-view {
   background-color: #fff;
-  height: 40rem;
+  flex: 1; }
+
+.details {
+  display: flex;
+  padding: 4rem;
+  background-color: var(--color-Grey-light-1);
+  border-bottom: var(--line); }
+
+.description {
+  background-color: #fff;
+  margin-right: 4rem;
+  padding: 2rem;
+  font-size: 1rem;
+  flex: 2;
+  box-shadow: var(--shadow-light); }
+
+.user-reviews {
+  background-color: aquamarine;
   flex: 1; }
 
 .logo {
@@ -196,7 +215,7 @@ body {
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--color-Grey-light-2); }
+  border-bottom: var(--line); }
   .overview__heading {
     font-size: 1.5rem;
     font-weight: 300;
@@ -265,3 +284,44 @@ body {
   100% {
     transform: scale(1);
     box-shadow: none; } }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  list-style: none;
+  margin: 2rem 0;
+  padding: 2rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: .4rem; }
+  .list__item::before {
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: .3rem;
+    background-color: var(--color-Primary);
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    mask-size: cover; }
+
+.recommend {
+  font-size: .9rem;
+  color: var(--color-Grey-dark-3);
+  display: flex;
+  align-items: center; }
+  .recommend__count {
+    margin-right: auto; }
+  .recommend__photo {
+    box-sizing: content-box;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-left: -1rem;
+    border: 3px solid #fff; }
