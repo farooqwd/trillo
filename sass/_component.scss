@@ -369,3 +369,108 @@
         // }
     }
 }
+
+////////////////////////////
+///  REVIEWS
+
+.review {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+
+    &__text {
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 10;
+    }
+    &__user {
+        display: flex;
+        align-items: center;
+        &-box {
+            margin-right: auto;
+        }
+        &-name{
+            font-size:.7rem ;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        &-date {
+            font-size: .6rem;
+        }
+    }
+    &__photo {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        margin-right: .5rem;
+    }
+    &__rating {
+        color: var(--color-Primary);
+        font-size: 1.4rem;
+    }
+
+    &::before {
+        content: "\201C";
+        font-size: 15rem;
+        line-height: 1;
+        color: var(--color-Grey-light-3);
+        font-family: sans-serif;
+        position: absolute;
+        top: -2rem;
+        left: -1rem;
+        z-index: 1;
+    }
+}
+
+.cta {
+    padding: 2rem;
+    text-align: center;
+    &__book-now {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.btn {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, var(--color-Primary-light), var(--color-Primary-dark));
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 1.2rem 4rem;
+
+    & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .3s;
+        left: 0;
+    } 
+    &__visible {
+        color: #fff;
+    }
+    &__invisible {
+        
+        position: absolute;
+        top: 100%;
+    }
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-Primary-light), var(--color-Primary-dark));
+    }
+    &:hover &__visible {
+        transform: translatey(-2.2rem);
+    }
+    &:hover &__invisible {
+        top: 35%;
+    }
+}
